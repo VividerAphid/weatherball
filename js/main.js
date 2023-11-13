@@ -28,8 +28,11 @@ function calcLighting(){
         brightness = Math.round((hour/12)*50);
     }
     if(hour > 12){
-        brightness = Math.round((hour-12) / 12) * 10;
+        brightness = Math.round(((23-hour) / 12)*50);
     }
+    console.log(hour);
+    console.log(23-hour);
+    console.log(brightness);
     arty.globalBrightness = brightness;
 }
 
